@@ -19,7 +19,7 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensures items are aligned properly */
+    align-items: center;
     width: 100%;
     max-width: 1200px;
 }
@@ -30,18 +30,18 @@ body {
     font-size: 24px;
     color: #FFFFFF;
     display: flex;
-    align-items: center; /* Aligns text properly */
+    align-items: center;
 }
 
 .logo img {
-    height: 40px; 
+    height: 40px;
     width: auto;
     display: block;
 }
 
 
 .navbar .cta {
-    margin: 0; /* Ensures button is aligned with text */
+    margin: 0;
 }
 
 
@@ -64,7 +64,7 @@ h1 {
 p {
     font-size: 18px;
     color: #A0AEC0;
-    max-width: 600px;
+    /* max-width: 600px; */
 }
 
 
@@ -127,6 +127,7 @@ p {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -138,6 +139,7 @@ p {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -149,6 +151,7 @@ p {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -156,71 +159,159 @@ p {
 }
 
 /* Key Features Section */
-.key-features {
-    background-color: #1f2937;
-    padding: 60px 0;  /* Reduced padding for smaller section */
-    text-align: center;
+
+#key-features {
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
 }
 
-.key-features .section-title {
+.section-title {
+    text-align: center;
     font-family: 'Inter', sans-serif;
-    font-size: 28px;  /* Smaller font size for title */
+    font-size: 28px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 30px;  /* Reduced margin */
+    margin-bottom: 30px;
 }
 
 /* Grid Layout */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;  /* Reduced gap between cards */
-    max-width: 1000px;  /* Reduced max width */
+    gap: 30px;
+    /* Reduced gap between cards */
+    max-width: 1000px;
+    /* Reduced max width */
     margin: 0 auto;
 }
 
 .feature-card {
     background-color: #2d3748;
     border-radius: 10px;
-    padding: 20px;  /* Reduced padding for a more compact card */
+    padding: 20px;
+    /* Reduced padding for a more compact card */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card h3 {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;  /* Slightly smaller font size */
+    font-size: 20px;
+    /* Slightly smaller font size */
     font-weight: 600;
     color: #ffffff;
-    margin-top: 15px;  /* Reduced margin */
+    margin-top: 15px;
+    /* Reduced margin */
 }
 
 .feature-card p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;  /* Smaller font size for description */
+    font-size: 14px;
+    /* Smaller font size for description */
     color: #a0aec0;
-    margin-top: 8px;  /* Reduced margin */
+    margin-top: 8px;
+    /* Reduced margin */
 }
 
 /* Feature Icon Style */
 .feature-icon {
-    font-size: 30px;  /* Smaller icon size */
+    font-size: 30px;
+    /* Smaller icon size */
     background-color: #4F46E5;
     color: #ffffff;
     padding: 12px;
     border-radius: 50%;
     display: inline-block;
+    transform: scale(0.9);
+    animation: imageFade 1s ease-out forwards;
 }
 
 /* Hover Effects */
 .feature-card:hover {
-    transform: translateY(-5px);  /* Reduced hover effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Reduced shadow */
+    transform: translateY(-5px);
+    /* Reduced hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Reduced shadow */
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .features-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+.design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1f;
+    min-height: 100vh;
+    padding: 100px 0;
+    font-family: Jost;
+}
+
+.design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content {
+    padding: 20px;
+    background: #1f1f1f;
+    -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+    box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+    border-radius: 5px;
+    color: white;
+    padding: 1.75rem;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    margin: 1rem;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.timeline-component {
+    margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .timeline {
+        display: grid;
+        grid-template-columns: 1fr 3px 1fr;
+    }
+
+    .timeline-middle {
+        position: relative;
+        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+        width: 3px;
+        height: 100%;
+    }
+
+    .main-middle {
+        opacity: 0;
+    }
+
+    .timeline-circle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 }
