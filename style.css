@@ -1,0 +1,226 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #E5E7EB;
+    background-color: #121826;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures items are aligned properly */
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center; /* Aligns text properly */
+}
+
+.logo img {
+    height: 40px; 
+    width: auto;
+    display: block;
+}
+
+
+.navbar .cta {
+    margin: 0; /* Ensures button is aligned with text */
+}
+
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    color: #A0AEC0;
+    max-width: 600px;
+}
+
+
+.cta {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    background: #4F46E5;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #6366F1;
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Section Fade-In */
+.hero {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Hero Heading & Text Slide-Up */
+.text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s ease-out forwards 0.3s;
+}
+
+/* Button Hover Animation */
+.cta:hover {
+    background: #6366F1;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+/* Image Fade & Scale */
+.hero-image img {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: imageFade 1s ease-out forwards 0.6s;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imageFade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Key Features Section */
+.key-features {
+    background-color: #1f2937;
+    padding: 60px 0;  /* Reduced padding for smaller section */
+    text-align: center;
+}
+
+.key-features .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;  /* Smaller font size for title */
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;  /* Reduced margin */
+}
+
+/* Grid Layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;  /* Reduced gap between cards */
+    max-width: 1000px;  /* Reduced max width */
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #2d3748;
+    border-radius: 10px;
+    padding: 20px;  /* Reduced padding for a more compact card */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;  /* Slightly smaller font size */
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 15px;  /* Reduced margin */
+}
+
+.feature-card p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;  /* Smaller font size for description */
+    color: #a0aec0;
+    margin-top: 8px;  /* Reduced margin */
+}
+
+/* Feature Icon Style */
+.feature-icon {
+    font-size: 30px;  /* Smaller icon size */
+    background-color: #4F46E5;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Hover Effects */
+.feature-card:hover {
+    transform: translateY(-5px);  /* Reduced hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Reduced shadow */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
